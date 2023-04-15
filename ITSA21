@@ -1,0 +1,18 @@
+import java.util.*;
+import java.text.DecimalFormat;
+public class Itsa21 {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		DecimalFormat f=new DecimalFormat("0.00");//要注意到用"#"的話，0會被省略掉
+		float input=0,ar[]=new float[10],max=ar[0],min=ar[0];
+		for(int i=0;i<10;i++)
+		{
+			input=sc.nextFloat();
+			ar[i]=input;
+			if(ar[i]>max)max=ar[i];
+			if(ar[i]<min)min=ar[i];
+		}
+		System.out.println("maximum:"+f.format(max));
+		System.out.println("minimum:"+f.format(min));
+	}
+}
